@@ -1,0 +1,19 @@
+---
+    import HeroInfo from "./HeroInfo.astro"
+---
+<section class="hero">
+    <HeroInfo></HeroInfo>
+    <img src="../../../public/images/dotdager.png" alt="dot-dager" class="hero-image">
+</section>
+
+<style>
+    .hero{
+        border:1px solid white;
+        display: flex;
+    }
+    .hero img{
+        transform:scaleX(-1);
+        height: 540px;
+    }
+
+</style>
