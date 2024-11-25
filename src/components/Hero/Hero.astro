@@ -2,18 +2,61 @@
     import HeroInfo from "./HeroInfo.astro"
 ---
 <section class="hero">
-    <HeroInfo></HeroInfo>
-    <img src="../../../public/images/dotdager.png" alt="dot-dager" class="hero-image">
+    <div class="hero-background">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <img src="../../../public/images/dotdager.png" alt="dot-dager" class="hero-image">
+        
+    </div>
+    
+    <div class="hero-text">
+        <HeroInfo></HeroInfo>
+    </div>
+    
 </section>
 
 <style>
     .hero{
-        border:1px solid white;
+        border-bottom:1px solid rgb(83, 82, 82);
         display: flex;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        
     }
-    .hero img{
-        transform:scaleX(-1);
-        height: 540px;
+    .hero-background{
+        position:absolute;
+        right: 0;
+        filter:opacity(.5)
     }
+    .hero-text{
+        position:absolute;
 
+    }
+    .hero-image{
+        transform:scaleX(-1);
+        height: 600px;
+    }
+    .circle1{
+        position: absolute;
+        bottom:0;
+        left:-50%;
+        width:200px;
+        height:200px;
+        border-radius: 100%;
+        background: rgba(0, 215, 243, 0.452);
+        filter: blur(80px);
+
+    }
+    .circle2{
+        position: absolute;
+        top:0;
+        left:-100%;
+        width:200px;
+        height:200px;
+        border-radius: 100%;
+        background: rgba(235, 0, 243, 0.4);
+        filter: blur(80px);
+    }
+    
 </style>

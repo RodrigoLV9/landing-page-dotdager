@@ -1,0 +1,114 @@
+<h2>Contact</h2>
+<form action="" class="form">
+    <div class="container-input">
+        <div class="input-group">
+            <input type="text" required class="input1">
+            <label for="">Name*</label>
+        </div>
+        <div class="input-group">
+            <input type="email"required class="input2">
+            <label for="">Mail*</label>
+        </div>
+    </div>
+    <div class="container-input2">
+        <div class="input-group">
+            <input type="text" required>
+            <label for="">Subject*</label>
+        </div>
+        <div class="input-group">
+            <input type="text" required>
+            <label for="">Message*</label>
+        </div>
+    </div>
+    
+    <button type="button" class="button">Send</button>
+</form>
+
+<style>
+    h2{
+        text-align: center;
+        margin:50px
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        padding: 15px;
+        margin:10px auto;
+        width:600px;
+        height: 300px;
+    }
+    .container-input{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .input-group{
+        position: relative;
+        margin:12px auto;
+        padding:10px 0
+    }
+    .input-group label{
+        position: absolute;
+        left: 10px;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: .9rem;
+        pointer-events: none;
+        transition: top .3s, color .3s;
+    }
+    .input-group input{
+        height: 35px;
+        outline: none;
+        font-weight: bolder;
+        border:none;
+        background-color: transparent;
+        border-bottom:2px solid rgb(63, 63, 63) ;
+        padding:5px;
+    
+    }
+    .input-group input:focus~label, .input-group input:valid~label{
+        top:0;
+    }
+    .button{
+        width:100%;
+        height: 35px;
+        background-color: rgb(88, 4, 136);
+        border:none;
+        border-radius: 3px;
+        margin:auto;
+        position:relative;
+        letter-spacing: 2px;
+        overflow: hidden;
+        transition: all .4s;
+    }
+    .button::before{
+        position: absolute;
+        display: block;
+        width:100%;
+        height: 35px;
+        content: " ";
+        background-color: rgba(131, 56, 141, 0.336);
+        top:0;
+        transform:translateX(-100%);
+        transition: transform .3s;
+        
+    }
+    .button:hover::before{
+        transform:translateX(0);
+    }
+    .button:hover{
+        font-size: .9em;
+    }
+    .container-input2 input{
+        width:100%
+    }
+    .container-input > .input-group{
+        width:100%
+    }
+    .container-input input{
+        width: 95%;
+        
+    }
+</style>

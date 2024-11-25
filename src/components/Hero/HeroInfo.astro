@@ -1,4 +1,6 @@
-
+---
+import HeroMusic from "./HeroMusic.astro"
+---
 <section class="info">
     <div class="info-text">
         <h1>Welcome to Dot Dager</h1>
@@ -12,12 +14,12 @@
         <a href="#" class="social-twitter"></a>
         <a href="#" class="social-linkedin"></a>
     </div>
+    <HeroMusic></HeroMusic>
 </section>
 
 <style>
     .info{
         width:700px;
-        
         margin:200px 20px;
     
     }
@@ -25,6 +27,18 @@
 
     }
     .info-text h1{
-        font-size:2rem;
+        font-size:2.1rem;
+        letter-spacing: 1px;
+        margin:20px 0
+    }
+    .info-text p{
+        width:600px;
+        letter-spacing: 1px;
+    }
+    .social{
+        width:300px;
+        height:30px;
+        margin:15px 0;
+        background-color: gray;
     }
 </style>
