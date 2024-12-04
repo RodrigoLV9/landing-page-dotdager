@@ -1,13 +1,48 @@
 ---
 import Carousel from "./Carousel.jsx"
 import Card from "./Card.astro"
+
+const cardInfo=[
+    {   
+        "title":"Cats",
+        "description":"These furry companions are a huge part of my life. Their independent yet affectionate nature inspires me daily (and keeps me on my toes)",
+        "image":"../../../public/images/cats.jpg"
+    },
+    {   
+        "title":"Programming",
+        "description":"From building apps to exploring new languages, coding is where I unleash my creativity. It's my way of solving problems and expressing ideas in the digital world.",
+        "image":"../../../public/images/programming.jpg"
+    },
+    {
+        "title":"Guitars",
+        "description":"Music is my escape. Whether it's strumming a few chords or diving into a full jam session, playing the guitar helps me unwind and connect with my artistic side.",
+        "image":"../../../public/images/guitar.jpg"
+    },
+    {
+        "title":"Philosophy",
+        "description":"I love questioning the world and exploring new perspectives. Deep conversations about life, existence, and everything in between keep me intrigued and constantly learning.",
+        "image":"../../../public/images/philosophy.jpg"
+    },
+    {
+        "title":"Pickles",
+        "description":"Yes, pickles! A quirky obsession, but they remind me to find joy in the little things – and sometimes, it's the most unexpected interests that make life fun.",
+        "image":"../../../public/images/pickles.jpg"
+    }
+]
 ---
 <h2>About Me</h2>
 <section class="aboutMe">
     <Carousel client:visible></Carousel>
     <div class="containerCards">
-        <Card></Card>
-        <Card></Card>
+        {
+            cardInfo.map((element)=>(
+                <Card
+                    title={element.title}
+                    description={element.description}
+                    image={element.image}
+                ></Card>
+            ))
+        }
     </div>
 </section>
 
@@ -18,18 +53,17 @@ import Card from "./Card.astro"
         text-align: center;
     }
     .aboutMe{
-        border:1px solid white;
         padding:30px 0
     }
     .containerCards{
+        margin:50px auto;
         width:100%;
-        height:700px;
-        margin:auto;
-        border:1px solid orange;
+        padding:20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap:10px
+        flex-wrap: wrap;
+        gap:30px
     }
 </style>
 

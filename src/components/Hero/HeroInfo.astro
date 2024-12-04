@@ -1,5 +1,8 @@
 ---
-import HeroMusic from "./HeroMusic.astro"
+import HeroMusic from "./HeroMusic.jsx"
+import { FaInstagram, FaLinkedin,  FaYoutube, FaSpotify} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiLinktree } from "react-icons/si";
 ---
 <section class="info">
     <div class="info-text">
@@ -8,13 +11,28 @@ import HeroMusic from "./HeroMusic.astro"
     </div>
     
     <div class="social">
-        <a href="#" class="social-ig"></a>
-        <a href="#" class="social-spotify"></a>
-        <a href="#" class="social-facebook"></a>
-        <a href="#" class="social-twitter"></a>
-        <a href="#" class="social-linkedin"></a>
+        <a href="#" class="social__item">
+            <FaInstagram className="logo"></FaInstagram>
+        </a>
+        <a href="#" class="social__item">
+            <FaLinkedin className="logo"></FaLinkedin>
+        </a>
+        <a href="#" class="social__item">
+            <FaYoutube className="logo"></FaYoutube>
+        </a>
+        <a href="#" class="social__item">
+            <FaXTwitter className="logo"></FaXTwitter>
+        </a>
+        <a href="#" class="social__item">
+            <FaSpotify className="logo"></FaSpotify>
+        </a>
+        <a href="#" class="social__item">
+            <SiLinktree className="logo"></SiLinktree>
+        </a>
+        <!-- Falta titok y github -->
+
     </div>
-    <HeroMusic></HeroMusic>
+    <HeroMusic client:visible></HeroMusic>
 </section>
 
 <style>
@@ -36,9 +54,32 @@ import HeroMusic from "./HeroMusic.astro"
         letter-spacing: 1px;
     }
     .social{
-        width:300px;
-        height:30px;
+        width:min-content;
+        height:50px;
         margin:15px 0;
-        background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        padding:10px;
+    }
+    .social__item{
+        background-color: rgb(0, 0, 0);
+        width:35px;
+        height:35px;
+        padding:5px;
+        border-radius:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:2px solid rgb(240, 160, 12);
+        transition: filter .3s;
+    }
+    .logo{
+        width:25px;
+        height: 25px;
+    }
+    .social__item:hover{
+        filter:invert(1)
     }
 </style>

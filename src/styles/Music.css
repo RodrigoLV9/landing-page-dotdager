@@ -1,0 +1,47 @@
+.music{
+    width:400px;
+    height:80px;
+    background-color: black;
+    border-radius:5px;
+    margin:15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+
+}
+.controls{
+    
+}
+button{
+    background-color: transparent;
+    padding:0;
+    margin:0;
+    border:0;
+
+}
+.controls__logo{
+    width:20px;
+    height: 20px;
+    margin:5px 10px;
+    
+}
+.containerBar{
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: red;
+}
+.containerBar p{
+    width:50px;
+    text-align: center;
+}
+.bar{
+    display: block;
+    width: 250px;
+    height: 15px;
+}
