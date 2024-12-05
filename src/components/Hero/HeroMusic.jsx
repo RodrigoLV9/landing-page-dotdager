@@ -71,7 +71,9 @@ export default function HeroMusic() {
 
   return (
     <div className="music">
-      <p className="title">HTML is not a lenguage programming</p>
+      <div className="containerTitle">
+        <p className="title">HTML is not a lenguage programming</p>
+      </div>
       <div className="controls">
         <audio
             ref={refAudio}

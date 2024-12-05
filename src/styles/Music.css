@@ -1,21 +1,35 @@
 .music{
     width:400px;
-    height:80px;
-    background-color: black;
+    height:110px;
+    background-color: rgba(255, 255, 255, 0.024);
+    backdrop-filter:blur(1px);
     border-radius:5px;
     margin:15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding:10px
 }
-
+.containerTitle{
+    overflow-y: hidden;
+    overflow-x:hidden;
+}
 .title{
+    width: 300px;
+    padding:5px;
+    white-space: nowrap;
+    animation: textMove 10s linear infinite alternate-reverse;
+}
+@keyframes textMove {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
 
-}
-.controls{
-    
-}
 button{
     background-color: transparent;
     padding:0;
@@ -34,7 +48,20 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: red;
+}
+.containerBar input{
+    background-color: #000000;
+    height: 5px;
+    color:gray
+}
+
+.containerBar input::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
 }
 .containerBar p{
     width:50px;
