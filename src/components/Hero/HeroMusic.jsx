@@ -4,8 +4,28 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import { TbPlayerTrackPrevFilled as Prev, TbPlayerTrackNextFilled as Next } from "react-icons/tb";
 
 export default function HeroMusic() {
-
-  const music=["../../../public/audio/html-music.mp3", "../../../public/audio/Lofiento.mp3", "../../../public/audio/Numb.mp3", "../../../public/audio/Quarantine.mp3", "../../../public/audio/seq.mp3"]
+  const music=[
+    {
+      "title":"HTML is not a programming language",
+      "url":"../../../public/audio/html-music.mp3"
+    },
+    {
+      "title":"Lofiento",
+      "url":"../../../public/audio/Lofiento.mp3"
+    },
+    {
+      "title":"Numb",
+      "url":"../../../public/audio/Numb.mp3"
+    },
+    {
+      "title":"Quarantine",
+      "url":"../../../public/audio/Quarantine.mp3"
+    },
+    {
+      "title":"Where's my seq?",
+      "url":"../../../public/audio/seq.mp3"
+    },
+  ]
 
   const [playing, setPlaying] = useState(false);
   const [seconds, setSeconds] = useState(0);
@@ -72,12 +92,12 @@ export default function HeroMusic() {
   return (
     <div className="music">
       <div className="containerTitle">
-        <p className="title">HTML is not a lenguage programming</p>
+        <p className="title">{music[index].title}</p>
       </div>
       <div className="controls">
         <audio
             ref={refAudio}
-            src={music[index]}
+            src={music[index].url}
             onLoadedMetadata={handleLoadedMusic}
             onEnded={handleEnded}
         />

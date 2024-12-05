@@ -1,7 +1,7 @@
 .music{
     width:400px;
     height:110px;
-    background-color: rgba(255, 255, 255, 0.024);
+    background-color: rgba(43, 42, 42, 0.329);
     backdrop-filter:blur(1px);
     border-radius:5px;
     margin:15px 0;
@@ -15,11 +15,13 @@
     overflow-y: hidden;
     overflow-x:hidden;
 }
+
 .title{
     width: 300px;
     padding:5px;
     white-space: nowrap;
-    animation: textMove 10s linear infinite alternate-reverse;
+    text-align: center;
+    /* animation: textMove 10s linear infinite alternate-reverse; */
 }
 @keyframes textMove {
     from{
