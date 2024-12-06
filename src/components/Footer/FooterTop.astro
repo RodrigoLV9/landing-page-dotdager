@@ -6,11 +6,11 @@ const items3=["Instagram","Facebook","Linkedin","Twitter","Spotify"]
 ---
 
 <section class="footerTop">
-    <section class="seccion1">
+    <section class="section1">
         <img src="../../../public/images/mainLogo.png" alt="logo" class="logo">
         <p>Hi, I’m Mariano, also known as Dot Dager. I’m a content creator passionate about programming, philosophy, guitars, cats, and yes, even pickles. </p>
     </section>
-    <section class="seccion2">
+    <section class="section2">
         <FooterCard title="Info" items={items1}></FooterCard>
         <FooterCard title="Interest" items={items2}></FooterCard>
         <FooterCard title="Social" items={items3}></FooterCard>
@@ -18,7 +18,7 @@ const items3=["Instagram","Facebook","Linkedin","Twitter","Spotify"]
 </section>
 
 <style>
-
+    
     .footerTop{
         border-top:1px solid gray;
         height: 400px;
@@ -27,7 +27,7 @@ const items3=["Instagram","Facebook","Linkedin","Twitter","Spotify"]
         align-items: center;
         justify-content: space-between;
     }
-    .seccion1{
+    .section1{
         min-width:200px;
         height:300px;
         border-right: 1px solid gray;
@@ -39,15 +39,43 @@ const items3=["Instagram","Facebook","Linkedin","Twitter","Spotify"]
         width:230px;
         height: 70px; 
     }
-    .seccion1 p{
+    .section1 p{
         margin-top:20px
     }
-    .seccion2{
+    .section2{
         width:100%;
         height: 300px;
         padding:15px;
         margin:10px;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    @media screen and (max-width:1080px) {
+        .footerTop{
+            flex-direction: column;
+            height: auto;
+        }
+        .section1{
+            text-align: center;
+            border-right: none;
+            margin:0;
+            height: auto;
+        }
+        
+        .section2{
+            height: auto;
+        }
+    }
+    @media screen and (max-width:420px){
+        .footerTop{
+            width: 100vw;
+        }
+        .seccion1{
+
+        }
+        .seccion2{
+
+        }
     }
 </style>
