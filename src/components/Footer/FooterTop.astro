@@ -67,15 +67,25 @@ const items3=["Instagram","Facebook","Linkedin","Twitter","Spotify"]
             height: auto;
         }
     }
-    @media screen and (max-width:420px){
+    @media screen and (max-width:720px){
         .footerTop{
-            width: 100vw;
+            font-size: .8rem;
         }
-        .seccion1{
-
+        .section2{
+            flex-wrap: wrap;
+            justify-content: start;
+            
         }
-        .seccion2{
+    }
 
+    @media screen and (max-width:480px){
+
+        .section2{
+            flex-direction: column;
+        }
+        .logo{
+            width:180px;
+            height: 50px;
         }
     }
 </style>
