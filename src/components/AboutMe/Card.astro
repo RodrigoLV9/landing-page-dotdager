@@ -88,5 +88,36 @@ const {title,description,image}=Astro.props
         width: 30px;
         height: 30px;
     }
-
+    @media screen and (max-width:1080px){
+        .card{
+            width:340px;
+            height: 210px;
+        }
+    }
+    @media screen and (max-width:720px){
+        .containerCard{
+            font-size: .8rem;
+        }
+        .card{
+            width:270px;
+            height: 170px;
+        }
+        .card__info h3{
+            padding:5px
+        }
+        .logo-item{
+            width:20px;
+            height: 20px;
+        }
+    }
+    @media screen and (max-width:480px){
+        .containerCard{
+            font-size: .7rem;
+        }
+        .card{
+            width:250px;
+            height: 150px;
+        }
+        
+    }
 </style>

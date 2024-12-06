@@ -1,5 +1,5 @@
 .swiper {
-  width: 80%;
+  width: 80vw;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -7,7 +7,7 @@
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 200px;
+  height: 160px;
 }
 .swiper-slide img {
   display: block;
@@ -16,4 +16,25 @@
 .swiper-button-next, .swiper-button-prev {
     color: rgb(241, 149, 29);
     font-weight: bold;
+}
+@media screen and (max-width:1080px) {
+  .swiper-slide{
+    height: 110px;
+    width: 240px;
   }
+}
+@media screen and (max-width:720px) {
+  .swiper-slide{
+    height: 80px;
+    width: 220px;
+  }
+}
+@media screen and (max-width:480px) {
+  .swiper{
+    width: 95%;
+  }
+  .swiper-slide{
+    height: 70px;
+    width: 190px;
+  }
+}
