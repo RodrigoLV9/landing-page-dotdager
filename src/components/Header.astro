@@ -1,34 +1,160 @@
-
 <header>
     <img src="../../public/images/mainLogo.png" alt="logo-main" class="logo">
-    <nav class="nav">
-        <a href="#" class="nav__item">Menu</a>
-        <a href="#" class="nav__item">About</a>
-        <a href="#" class="nav__item">Contact</a>
+    <nav class="nav" id="nav">
+        <div class="container-item">
+            <a href="#" class="nav__item">Menu</a>
+        </div>
+        <div class="container-item">
+            <a href="#" class="nav__item">About</a>
+        </div>
+        <div class="container-item">
+            <a href="#" class="nav__item">Contact</a>
+        </div>
     </nav>
-</header>
-
-
-<style>
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding:5px 20px;
-        border-bottom:2px solid rgba(123, 1, 139, 0.527);
+    <div class="menu" id="menu"></div>
+  </header>
+  
+  <script>
+    const menu = document.getElementById("menu");
+    const nav = document.getElementById("nav");
+  
+    menu.addEventListener("click", () => {
+      nav.classList.toggle("nav-modified");
+      menu.classList.toggle("menu-modified");
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 720) {
+            menu.classList.remove("menu-modified");
+            nav.classList.remove("nav-modified")
+        }
+    });
+  </script>
+  
+  <style>
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 20px;
+      border-bottom: 2px solid rgba(123, 1, 139, 0.527);
+      background-color: rgba(0, 0, 0, 0.486);
+      backdrop-filter: blur(5px);
+      width: 100%;
+      height: 60px;
+      position: fixed;
+      z-index: 2;
+    }
+    .logo {
+      width: 190px;
+      height: 50px;
+      margin-left: 50px;
+    }
+    nav {
+      height: 100%;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      position:relative;
+      
+    }
+    .container-item{
+        overflow-x: hidden;
+        padding:2px 0;
+    }
+    .nav__item{
+        position:relative;  
+    }
+    .nav__item::after{
+        content: "";
+        display: block;
+        position: absolute;
         width:100%;
-        height: 60px;
+        height: 2px;
+        background-color: rgb(85, 8, 97);
+        transform: translateX(-100%);
+        transition: transform .2s;
     }
-    .logo{
-        width:190px;
-        height:50px;
-        margin-left:50px;
+    .nav__item:hover::after {
+        transform: translateX(0);
     }
-    nav{
-        height: 100%;
-        width: 400px;
-        display:flex;
-        align-items: center;
-        justify-content: space-evenly;
+    .menu {
+      position: absolute;
+      right: 15px;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transform: translateX(40px);
+      transform-origin: center;
+      transition: transform 0.3s ease;
     }
-</style>
+    .menu::after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .menu::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      top: -7px;
+      left: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .menu:hover {
+      transform: scale(0.9);
+    }
+    /* Responsive */
+    @media screen and (max-width: 720px) {
+        header{
+            padding:0px 10px
+        }
+      .nav {
+        padding: 90px 0 0 0;
+        flex-direction: column;
+        background-color: rgb(22, 22, 22);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+        justify-content: start;
+        gap: 30px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+      .menu{
+        transform: translateX(0);
+      }
+      .logo{
+        width:130px;
+        height: 40px;
+        margin:0;
+      }
+    }
+  
+    /* Toggle states */
+    .nav-modified {
+      transform: translateX(0);
+    }
+    .menu-modified {
+      rotate: 45deg;
+    }
+    .menu-modified::before {
+      transform: rotate(90deg);
+      top: 0;
+    }
+    .menu-modified::after {
+      opacity: 0;
+    }
+  </style>
+  
