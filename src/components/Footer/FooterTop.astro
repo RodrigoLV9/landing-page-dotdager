@@ -1,8 +1,82 @@
 ---
 import FooterCard from "./FooterCard.astro"
-const items1=["mariano97@gmail.com","+54812912","123 Fake Street"]
-const items2=["Cats","Programming","Guitars","Philosophy","Pickles"]
-const items3=["Instagram","Facebook","Linkedin","Twitter","Spotify"]
+import { BsFillTelephoneFill as Telephone} from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { SiGooglemaps as Gps} from "react-icons/si";
+import { FaCat, FaGuitar  } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
+import { GiPickle, GiWhiteBook } from "react-icons/gi";
+import { FaInstagram, FaLinkedin,  FaYoutube, FaSpotify, FaGithub} from "react-icons/fa";
+import { SiLinktree } from "react-icons/si";
+const items1=[
+    {
+        'info':'mariano97@gmail.com',
+        'component':MdEmail
+    },
+    {
+        'info':'+54812912',
+        'component':Telephone
+    },
+    {
+        'info':'123 Fake Street',
+        'component':Gps
+    }
+]
+const items2=[
+    {
+        'info':'Cats',
+        'component':FaCat
+    },
+    {
+        'info':'Programming',
+        'component':FaComputer
+    },
+    {
+        'info':'Guitars',
+        'component':FaGuitar
+    },
+    {
+        'info':'Philosophy',
+        'component':GiWhiteBook
+    },
+    {
+        'info':'Pickles',
+        'component':GiPickle
+    }
+]
+const items3=[
+    {
+        'info':'Youtube',
+        'component':FaYoutube,
+        'url':'https://www.youtube.com/@DotDager'
+    },
+    {
+        'info':'Instagram',
+        'component':FaInstagram,
+        'url':'https://www.instagram.com/dager.32'
+    },
+    {
+        'info':'Linkedin',
+        'component':FaLinkedin,
+        'url':'https://www.linkedin.com/in/mariano-luis-villa/?locale=en_US'
+    },
+    {
+        'info':'Github',
+        'component':FaGithub,
+        'url':'https://github.com/MarianoVilla'
+    },
+    {
+        'info':'Linktree',
+        'component':SiLinktree,
+        'url':'https://linktr.ee/DotDager'
+    },
+    {
+        'info':'Spotify',
+        'component':FaSpotify,
+        'url':'https://open.spotify.com/artist/6bkClBMJd4qKxJp0J5vHsz?si=mbfNHqvBT9SKSQ-ZNhXHJg&nd=1'
+    }
+]
+
 ---
 
 <section class="footerTop">
