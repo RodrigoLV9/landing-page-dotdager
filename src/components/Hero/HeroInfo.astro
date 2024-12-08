@@ -1,36 +1,59 @@
 ---
 import HeroMusic from "./HeroMusic.jsx"
-import { FaInstagram, FaLinkedin,  FaYoutube, FaSpotify} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin,  FaYoutube, FaSpotify, FaGithub, FaTiktok} from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
+
+const items=[
+    {
+        'info':'Youtube',
+        'component':FaYoutube,
+        'url':'https://www.youtube.com/@DotDager'
+    },
+    {
+        'info':'Instagram',
+        'component':FaInstagram,
+        'url':'https://www.instagram.com/dager.32'
+    },
+    {
+        'info':'Linkedin',
+        'component':FaLinkedin,
+        'url':'https://www.linkedin.com/in/mariano-luis-villa/?locale=en_US'
+    },
+    {
+        'info':'Github',
+        'component':FaGithub,
+        'url':'https://github.com/MarianoVilla'
+    },
+    {
+        'info':'Linktree',
+        'component':SiLinktree,
+        'url':'https://linktr.ee/DotDager'
+    },
+    {
+        'info':'Spotify',
+        'component':FaSpotify,
+        'url':'https://open.spotify.com/artist/6bkClBMJd4qKxJp0J5vHsz?si=mbfNHqvBT9SKSQ-ZNhXHJg&nd=1'
+    },
+    {
+        'info':'TikTok',
+        'component':FaTiktok,
+        'url':'https://www.tiktok.com/@elantrodedager'
+    }
+]
 ---
 <section class="info">
     <div class="info-text">
         <h1>Welcome to Dot Dager</h1>
         <p>Hi, I’m Mariano, also known as Dot Dager. I’m a content creator passionate about programming, philosophy, guitars, cats, and yes, even pickles.</p>
     </div>
-    
     <div class="social">
-        <a href="#" class="social__item">
-            <FaInstagram className="logo"></FaInstagram>
-        </a>
-        <a href="#" class="social__item">
-            <FaLinkedin className="logo"></FaLinkedin>
-        </a>
-        <a href="#" class="social__item">
-            <FaYoutube className="logo"></FaYoutube>
-        </a>
-        <a href="#" class="social__item">
-            <FaXTwitter className="logo"></FaXTwitter>
-        </a>
-        <a href="#" class="social__item">
-            <FaSpotify className="logo"></FaSpotify>
-        </a>
-        <a href="#" class="social__item">
-            <SiLinktree className="logo"></SiLinktree>
-        </a>
-        <!-- Falta titok y github -->
-
+        {
+            items.map((element)=>(
+                <a href={element.url} class="social__item">
+                    <element.component className="logo"/>
+                </a>
+            ))
+        }
     </div>
     <HeroMusic client:visible></HeroMusic>
 </section>
