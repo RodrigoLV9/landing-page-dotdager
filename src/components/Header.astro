@@ -1,7 +1,18 @@
+---
+const itemsHeader=["Home","About","Contact","Game"]
+---
 <header>
     <img src="../../public/images/mainLogo.png" alt="logo-main" class="logo">
     <nav class="nav" id="nav">
-        <div class="container-item">
+      {
+        itemsHeader.map((item)=>(
+          <div class="container-item">
+            <a href=`#${item.toLocaleLowerCase()}` class="nav__item">{item}</a>
+          </div>
+        ))
+      }
+      
+      <!--   <div class="container-item">
             <a href="#hero" class="nav__item">Home</a>
         </div>
         <div class="container-item">
@@ -12,7 +23,7 @@
         </div>
         <div class="container-item">
           <a href="#game" class="nav__item">Game</a>
-        </div>
+        </div> -->
     </nav>
     <div class="menu" id="menu"></div>
   </header>
