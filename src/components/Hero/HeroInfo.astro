@@ -60,9 +60,9 @@ const items=[
 
 <style>
     .info{
-        width:700px;
-        margin:200px 20px;
-    
+        width:100%;
+        margin:200px 5vw;
+        
     }
     .info-text{
 
@@ -73,7 +73,6 @@ const items=[
         margin:20px 0
     }
     .info-text p{
-        width:600px;
         letter-spacing: 1px;
     }
     .social{
@@ -104,5 +103,23 @@ const items=[
     }
     .social__item:hover{
         border-color: lightseagreen;
+    }
+    @media screen and (max-width:720px) {
+        .info{
+            margin:220px auto;
+        }
+        
+    }
+    @media screen and (max-width:440px) {
+        .social__item{
+            width:30px;
+            height: 30px;
+        }
+        .info-text h1{
+            font-size: 1.5rem;
+        }
+        .info-text p{
+            font-size: .9em;
+        }
     }
 </style>

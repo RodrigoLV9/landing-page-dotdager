@@ -9,7 +9,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding:10px
+    padding:10px;
+    
 }
 .containerTitle{
     overflow-y: hidden;
@@ -72,4 +73,20 @@ button{
     display: block;
     width: 250px;
     height: 15px;
+}
+@media screen and (max-width:720px) {
+    .music{
+        width:350px
+    }
+    
+}
+@media screen and (max-width:440px) {
+    .music{
+        width:270px;
+        font-size: .9em;
+        margin: auto;
+    }
+    .containerBar{
+        width:240px
+    }
 }

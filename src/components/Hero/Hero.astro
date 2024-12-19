@@ -19,10 +19,10 @@
     .hero{
         border-bottom:1px solid rgb(83, 82, 82);
         display: flex;
-        height: 600px;
+        height: 100vh;
         position: relative;
         overflow: hidden;
-        
+        margin: auto;
     }
     .hero-background{
         position:absolute;
@@ -31,11 +31,12 @@
     }
     .hero-text{
         position:absolute;
-
+        width: 600px;
+        
     }
     .hero-image{
         transform:scaleX(-1);
-        height: 600px;
+        height: 100vh;
     }
     .circle1{
         position: absolute;
@@ -57,6 +58,34 @@
         border-radius: 100%;
         background: rgba(235, 0, 243, 0.4);
         filter: blur(80px);
+    }
+    @media screen and (max-width:720px) {
+        .hero{
+            flex-direction: column;
+            align-items: center;
+            height: 900px
+        }
+        .hero-background{
+            position: relative;
+        }
+        .hero-image{
+            width:250px;
+            height: 250px;
+            border-radius: 100%;
+            margin-top:100px
+            
+        }
+        .circle1, .circle2{
+            
+        }
+        .hero-text{
+            position:relative;
+            top:-120px;
+            right: 0;
+            width:80vw
+        }
+        }
+        
     }
     
 </style>
