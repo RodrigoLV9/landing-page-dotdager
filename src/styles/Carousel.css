@@ -14,7 +14,7 @@
   width: 100%;
 }
 .swiper-button-next, .swiper-button-prev {
-    color: rgb(241, 149, 29);
+    color: var(--secondary);
     font-weight: bold;
 }
 @media screen and (max-width:1080px) {

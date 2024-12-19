@@ -39,7 +39,7 @@ const {title,description,image}=Astro.props
     .card{
         width: 400px;
         height: 250px;
-        border:2px solid orange;
+        border:2px solid var(--secondary);
         position:relative;
         display: flex;
         align-items: center;
@@ -74,12 +74,12 @@ const {title,description,image}=Astro.props
         transform: translateX(0);
     }  
     .logo{
-        background-color: rgb(29, 26, 29);
+        background-color: var(--bg-color);
         position: absolute;
         top:-25px;
         border-radius: 50%;
         padding:10px;
-        border:2px solid orange;
+        border:2px solid var(--secondary);
         
     }
 
