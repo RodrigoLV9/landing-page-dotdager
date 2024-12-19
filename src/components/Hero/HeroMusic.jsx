@@ -32,6 +32,8 @@ export default function HeroMusic() {
   const [minutes, setMinutes] = useState(0)
   const [index, setIndex]=useState(0)
   const [duration, setDuration]=useState(0)
+  const intervalRef = useRef(null);
+  const refAudio=useRef(null)
   const handleLoadedMusic=()=>{
     setDuration(Math.floor(refAudio.current.duration))
   }
@@ -47,11 +49,8 @@ export default function HeroMusic() {
     setMinutes(0)
     setSeconds(0)
   }
-  const intervalRef = useRef(null);
-
   const handleMusic = () => {
     setPlaying(!playing);
-    console.log(Math.floor(refAudio.current.duration))
   };
   const handleEnded = () => {
     handleNextMusic();
@@ -77,7 +76,6 @@ export default function HeroMusic() {
       refAudio.current.pause();
       clearInterval(intervalRef.current);
     }
-  
     return () => clearInterval(intervalRef.current);
   }, [playing]);
 
@@ -87,8 +85,6 @@ export default function HeroMusic() {
     setSeconds(totalSeconds%60)
     refAudio.current.currentTime=totalSeconds
   }
-  const refAudio=useRef(null)
-
   return (
     <div className="music">
       <div className="containerTitle">
@@ -112,7 +108,7 @@ export default function HeroMusic() {
           type="range"
           value={minutes*60+seconds}
           min={0}
-          max={duration}
+          max={duration || 65}
           className="bar"
           onChange={handleRangeChange}
         />
