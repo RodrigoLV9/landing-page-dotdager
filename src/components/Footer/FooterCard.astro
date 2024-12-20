@@ -14,7 +14,7 @@ const {title, items}= Astro.props
             items.map((i)=>(
                 <li>
                     <i.component/>
-                    <a href={i.url} target="_blank">{i.info}</a>
+                    <a href={i.url} target="_blank" aria-label={i.info}>{i.info}</a>
                 </li>
             ))
         }

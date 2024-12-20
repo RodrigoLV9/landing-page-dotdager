@@ -2,17 +2,18 @@
 import { FaCat, FaGuitar  } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { GiPickle, GiWhiteBook } from "react-icons/gi";
+import { Image } from "astro:assets"
 
 interface Props{
     title:string,
     description:string,
-    image:string
+    image: any
 }
 const {title,description,image}=Astro.props
 ---
 <div class="containerCard">
     <div class="card">
-        <img src={image} alt={title.toLowerCase()}>
+        <Image src={image} alt={title.toLocaleLowerCase()} format="webp" loading="lazy"/>
         <div class="card__info">
             <h3>{title}</h3>
             <p>{description}</p>

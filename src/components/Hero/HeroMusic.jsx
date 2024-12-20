@@ -96,12 +96,13 @@ export default function HeroMusic() {
             src={music[index].url}
             onLoadedMetadata={handleLoadedMusic}
             onEnded={handleEnded}
+            aria-label="music player"
         />
-        <Prev className="controls__logo" onClick={handlePrevMusic}/>
-        <button onClick={handleMusic}>
+        <Prev className="controls__logo" onClick={handlePrevMusic} name="previous music"/>
+        <button onClick={handleMusic} name='play music'>
           {playing ? <FaPause className="controls__logo" /> : <FaPlay className="controls__logo" />}
         </button>
-        <Next className="controls__logo" onClick={handleNextMusic}/>
+        <Next className="controls__logo" onClick={handleNextMusic} name="next music"/>
       </div>
       <div className="containerBar">
         <input
@@ -111,6 +112,7 @@ export default function HeroMusic() {
           max={duration || 65}
           className="bar"
           onChange={handleRangeChange}
+          aria-label="Progress for music"
         />
         <p>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</p>
       </div>

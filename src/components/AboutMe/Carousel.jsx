@@ -44,7 +44,7 @@ export default function App() {
         {
           slides.map((url,id)=>(
             <SwiperSlide key={id}>
-              <img src={url} alt={`carousel-item${id+1}`}/>
+              <img src={url} alt={`carousel-item${id+1}`} loading='lazy'/>
             </SwiperSlide>
           ))
         }

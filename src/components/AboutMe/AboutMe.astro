@@ -2,37 +2,42 @@
 
 import Carousel from "./Carousel.jsx"
 import Card from "./Card.astro"
-
+import Cats from  '../../../public/images/cats.jpg'
+import Programming from  '../../../public/images/programming.jpg'
+import Guitar from  '../../../public/images/guitar.jpg'
+import Philosophy from  '../../../public/images/philosophy.jpg'
+import Pickles from  '../../../public/images/pickles.jpg'
 const cardInfo=[
     {   
         "title":"Cats",
         "description":"These furry companions are a huge part of my life. Their independent yet affectionate nature inspires me daily (and keeps me on my toes)",
-        "image":"/images/cats.jpg"
+        "image":Cats
     },
     {   
         "title":"Programming",
         "description":"From building apps to exploring new languages, coding is where I unleash my creativity. It's my way of solving problems and expressing ideas in the digital world.",
-        "image":"/images/programming.jpg"
+        "image":Programming
     },
     {
         "title":"Guitars",
         "description":"Music is my escape. Whether it's strumming a few chords or diving into a full jam session, playing the guitar helps me unwind and connect with my artistic side.",
-        "image":"/images/guitar.jpg"
+        "image":Guitar
     },
     {
         "title":"Philosophy",
         "description":"I love questioning the world and exploring new perspectives. Deep conversations about life, existence, and everything in between keep me intrigued and constantly learning.",
-        "image":"/images/philosophy.jpg"
+        "image":Philosophy
     },
     {
         "title":"Pickles",
         "description":"Yes, pickles! A quirky obsession, but they remind me to find joy in the little things – and sometimes, it's the most unexpected interests that make life fun.",
-        "image":"/images/pickles.jpg"
+        "image":Pickles
     }
 ]
+
 ---
 <h2 id="about">About Me</h2>
-<section class="aboutMe">
+<main class="aboutMe">
     <Carousel client:visible></Carousel>
     <div class="containerCards">
         {
@@ -45,7 +50,7 @@ const cardInfo=[
             ))
         }
     </div>
-</section>
+</main>
 
 <style>
     h2{

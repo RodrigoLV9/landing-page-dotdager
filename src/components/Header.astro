@@ -1,13 +1,15 @@
 ---
 const itemsHeader=["Home","About","Contact","Game"]
+import mainLogo from '../../public/images/mainLogo.png'
+import { Image } from 'astro:assets';
 ---
 <header>
-    <img src="/images/mainLogo.png" alt="logo-main" class="logo">
+    <Image src={mainLogo} format='webp' alt='main logo' class="logo"/>
     <nav class="nav" id="nav">
       {
         itemsHeader.map((item)=>(
           <div class="container-item">
-            <a href=`#${item.toLocaleLowerCase()}` class="nav__item">{item}</a>
+            <a href=`#${item.toLocaleLowerCase()}` class="nav__item" aria-label={item}>{item}</a>
           </div>
         ))
       }
