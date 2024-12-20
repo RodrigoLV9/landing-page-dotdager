@@ -1,10 +1,13 @@
 ---
     import HeroInfo from "./HeroInfo.astro"
+    import dotDager from '../../../public/images/dotdager.png'
+    import { Image } from "astro:assets";
 ---
 <section class="hero" id="home">
     <div class="hero-background">
         <div class="circle1"></div>
         <div class="circle2"></div>
+        <Image src={dotDager} alt="dot dager" class="hero-image" format="webp"/>
         <img src="/images/dotdager.png" alt="dot-dager" class="hero-image">
         
     </div>
