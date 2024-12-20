@@ -8,18 +8,18 @@ import "../../styles/Carousel.css"
 
 export default function App() {
   const slides = [
-    "../../../public/images/carousel1.jpg",
-    "../../../public/images/carousel2.jpg",
-    "../../../public/images/carousel3.jpg",
-    "../../../public/images/carousel4.jpg",
-    "../../../public/images/carousel5.jpg",
-    "../../../public/images/carousel6.jpg",
-    "../../../public/images/carousel7.jpg",
-    "../../../public/images/carousel8.jpg",
-    "../../../public/images/carousel9.jpg",
-    "../../../public/images/carousel10.jpg",
-    "../../../public/images/carousel11.png",
-    "../../../public/images/carousel12.png"
+    "/images/carousel1.jpg",
+    "/images/carousel2.jpg",
+    "/images/carousel3.jpg",
+    "/images/carousel4.jpg",
+    "/images/carousel5.jpg",
+    "/images/carousel6.jpg",
+    "/images/carousel7.jpg",
+    "/images/carousel8.jpg",
+    "/images/carousel9.jpg",
+    "/images/carousel10.jpg",
+    "/images/carousel11.png",
+    "/images/carousel12.png"
   ];
   return (
     <>

@@ -7,23 +7,23 @@ export default function HeroMusic() {
   const music=[
     {
       "title":"HTML is not a programming language",
-      "url":"../../../public/audio/html-music.mp3"
+      "url":"/audio/html-music.mp3"
     },
     {
       "title":"Lofiento",
-      "url":"../../../public/audio/Lofiento.mp3"
+      "url":"/audio/Lofiento.mp3"
     },
     {
       "title":"Numb",
-      "url":"../../../public/audio/Numb.mp3"
+      "url":"/audio/Numb.mp3"
     },
     {
       "title":"Quarantine",
-      "url":"../../../public/audio/Quarantine.mp3"
+      "url":"/audio/Quarantine.mp3"
     },
     {
       "title":"Where's my seq?",
-      "url":"../../../public/audio/seq.mp3"
+      "url":"/audio/seq.mp3"
     },
   ]
 
