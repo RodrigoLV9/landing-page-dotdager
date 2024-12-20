@@ -12,7 +12,7 @@ const {title,description,image}=Astro.props
 ---
 <div class="containerCard">
     <div class="card">
-        <img src={image} alt="gato">
+        <img src={image} alt={title.toLowerCase()}>
         <div class="card__info">
             <h3>{title}</h3>
             <p>{description}</p>
@@ -80,7 +80,6 @@ const {title,description,image}=Astro.props
         border-radius: 50%;
         padding:10px;
         border:2px solid var(--secondary);
-        
     }
 
     .logo-item{
